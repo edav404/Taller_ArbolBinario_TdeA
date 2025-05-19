@@ -22,31 +22,39 @@ public class MainArbolTaller {
                 opcion = sc.nextInt();
 
                 switch (opcion) {
-                    case 1 -> {
+                    case 1:
                         System.out.print("Ingrese el valor del nodo: ");
                         arbol.agregar(sc.nextInt());
-                    }
-                    case 2 -> {
+                        break;
+                    case 2:
                         System.out.print("PreOrden: "); arbol.preOrden();
                         System.out.print("\nInOrden: "); arbol.inOrden();
                         System.out.print("\nPostOrden: "); arbol.postOrden();
-                    }
-                    case 3 -> {
+                        break;
+                    case 3:
                         System.out.print("Ingrese el valor a buscar: ");
                         System.out.println(arbol.buscar(sc.nextInt()) ? "Nodo encontrado" : "Nodo no encontrado");
-                    }
-                    case 4 -> System.out.println("Altura del Árbol: " + arbol.altura());
-                    case 5 -> System.out.println("Nodos Hojas: " + arbol.contarHojas());
-                    case 6 -> {
+                        break;
+                    case 4:
+                        System.out.println("Altura del Árbol: " + arbol.altura());
+                        break;
+                    case 5:
+                        System.out.println("Nodos Hojas: " + arbol.contarHojas());
+                        break;
+                    case 6:
                         System.out.print("Ingrese el valor a borrar: ");
                         arbol.borrar(sc.nextInt());
-                    }
-                    case 7 -> {
+                        break;
+                    case 7:
                         arbol.vaciar();
                         System.out.println("Árbol vaciado.");
-                    }
-                    case 8 -> System.out.println("Saliendo...");
-                    default -> System.out.println("Opción no válida.");
+                        break;
+                    case 8:
+                        System.out.println("Saliendo...");
+                        break;
+                    default:
+                        System.out.println("Opción no válida.");
+                        break;
                 }
             } catch (Exception e) {
                 System.out.println("Error: Entrada no válida. Intente nuevamente.");
